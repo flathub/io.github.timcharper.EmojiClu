@@ -1,6 +1,6 @@
 app-id: io.github.timcharper.EmojiClu
 runtime: org.gnome.Platform
-runtime-version: "48"
+runtime-version: "50"
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -29,4 +29,4 @@ modules:
       - cargo --offline fetch --manifest-path Cargo.toml --verbose
       - CARGO_OFFLINE=1 make packaging/dist
       - cp -r packaging/dist/* /app/
-      - install -D packaging/flatpak/metainfo/io.github.timcharper.EmojiClu.appdata.xml /app/share/metainfo/io.github.timcharper.EmojiClu.appdata.xml
+      - install -D packaging/flatpak/metainfo/io.github.timcharper.EmojiClu.appdata.xml -t /app/share/metainfo/
